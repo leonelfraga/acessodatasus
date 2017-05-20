@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/sexo" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/sexo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa a entidade sexo.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="Sexo" type="SexoType" />
+  <xs:complexType name="SexoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="codigoSexo" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código do sexo. M - Masculino | F - Feminino]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descricaoSexo" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Descrição do sexo. Masculino | Feminino]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

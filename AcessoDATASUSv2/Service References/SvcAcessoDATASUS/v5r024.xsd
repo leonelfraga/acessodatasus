@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/racacor" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/racacor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Representação de Raça ou Cor. PORTARIA N° 719, DE 28 DE DEZEMBRO DE 2007.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="RacaCor" type="RacaCorType" />
+  <xs:complexType name="RacaCorType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="codigoRacaCor">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Codigo utilizado de acordo com a PORTARIA N° 719, DE 28 DE DEZEMBRO DE 2007: 01-Branca, 02-Preta, 03-Parda, 04-Amarela, 05-Indigena, 99-Sem Informacao e X-Invalido.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="4" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descricaoRacaCor" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Descricao da raca cor. Ex: Negro.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

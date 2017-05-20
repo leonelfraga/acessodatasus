@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:qualidade="http://servicos.saude.gov.br/schema/cadsus/v5r0/grauqualidade" xmlns:sexo="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/sexo" xmlns:cns="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" xmlns:pais="http://servicos.saude.gov.br/schema/corporativo/v1r2/pais" xmlns:identificadorcorporativo="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorcorporativo" xmlns:municipio="http://servicos.saude.gov.br/schema/corporativo/v1r2/municipio" xmlns:nomecompleto="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/nomecompleto" xmlns="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/resultadopesquisa" xmlns:nomesocial="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/nomesocial" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/resultadopesquisa" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Abce42fe7-3157-479a-864a-dc5ebea1d995" id="cns" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A7519b649-dea3-40fc-b94e-6fb61410de7c" id="identificadorcorporativo" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorcorporativo" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A5c464e04-7c33-4801-b525-61d9f956dd1d" id="sexo" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/sexo" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A2d07b707-3373-4305-a361-28bdacc25054" id="municipio" namespace="http://servicos.saude.gov.br/schema/corporativo/v1r2/municipio" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Aad2fe836-0cf0-48be-8147-36fe69f6ca47" id="pais" namespace="http://servicos.saude.gov.br/schema/corporativo/v1r2/pais" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Af987543c-ccb5-4e6e-a33e-a9b174322e0e" id="nomecompleto" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/nomecompleto" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A4af61ab2-81ce-4237-b423-1bc47321f5a9" id="nomesocial" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/nomesocial" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Afe0b8fae-f9ad-48d7-82dd-cae33870df0a" id="qualidade" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/grauqualidade" />
+  <xs:annotation>
+    <xs:documentation>Representa o objeto de resultado da pesquisa do
+			usuario SUS.
+		</xs:documentation>
+  </xs:annotation>
+  <xs:element name="ResultadoPesquisa">
+    <xs:annotation>
+      <xs:documentation>Representa o objeto de resultado da pesquisa do
+				usuario SUS.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CNS" type="cns:CNSType">
+          <xs:annotation>
+            <xs:documentation>CNS definitivo do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="NomeCompleto" type="nomecompleto:NomeCompletoType">
+          <xs:annotation>
+            <xs:documentation>Nome completo do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="NomeSocial" type="nomesocial:NomeSocialType">
+          <xs:annotation>
+            <xs:documentation>Nome social do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="dataNascimento" type="xs:date">
+          <xs:annotation>
+            <xs:documentation>Data de nascimento do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="Mae" type="nomecompleto:NomeCompletoType">
+          <xs:annotation>
+            <xs:documentation>Nome da mae do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="Pai" type="nomecompleto:NomeCompletoType">
+          <xs:annotation>
+            <xs:documentation>Nome do pai do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="Sexo" type="sexo:SexoType">
+          <xs:annotation>
+            <xs:documentation>Sexo do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="MunicipioNascimento" type="municipio:MunicipioType">
+          <xs:annotation>
+            <xs:documentation>Municipio de nascimento do usuario SUS (usado
+							apenas para usuarios nascidos
+							no Brasil).
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="PaisNascimento" type="pais:PaisType">
+          <xs:annotation>
+            <xs:documentation>País de nascimento do usuário do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="MunicipioResidencia" type="municipio:MunicipioType">
+          <xs:annotation>
+            <xs:documentation>Municipio de residencia do usuario SUS (usado
+							apenas para usuarios residentes
+							no Brasil).
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="GrauQualidade" type="qualidade:GrauQualidadeType">
+          <xs:annotation>
+            <xs:documentation>Representa Grau de qualidade de um cadastro de
+							usuário do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="scorePesquisa" type="xs:integer">
+          <xs:annotation>
+            <xs:documentation>Indica o score do registro referente à pesquisa.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="IdentificadorCorporativo" type="identificadorcorporativo:IdentificadorCorporativoType">
+          <xs:annotation>
+            <xs:documentation>Identificador corporativo do Usuário do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="Situacao" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation><![CDATA[Situação: Ativo / Inativo.]]></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

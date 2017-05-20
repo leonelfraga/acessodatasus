@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/telefone/v1r1/tipotelefone" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/telefone/v1r1/tipotelefone" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa tipo de telefone.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="TipoTelefone" type="TipoTelefoneType" />
+  <xs:complexType name="TipoTelefoneType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="codigoTipoTelefone">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código do tipo de telefone.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="2" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descricaoTipoTelefone" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Descrição do tipo de telefone.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/tipocertidao" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/tipocertidao" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa um tipo certidao.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="TipoCertidao" type="TipoCertidaoType" />
+  <xs:simpleType name="TipoCertidaoType">
+    <xs:annotation>
+      <xs:documentation><![CDATA[Tipo da certidao - 91-NASCIMENTO, 92-CASAMENTO, 93-SEPARAÇÃO OU DIVÓRCIO, 95-ADMINISTRATIVA - ÍNDIO (RANI).]]></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="91" />
+      <xs:enumeration value="92" />
+      <xs:enumeration value="93" />
+      <xs:enumeration value="95" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

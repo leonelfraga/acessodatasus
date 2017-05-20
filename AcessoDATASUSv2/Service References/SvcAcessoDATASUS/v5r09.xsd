@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/tituloeleitor" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/tituloeleitor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o documento Titulo de Eleitor.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="TituloEleitor" type="TituloEleitorType" />
+  <xs:complexType name="TituloEleitorType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identificador" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código de identificação.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="numeroTituloEleitor">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do Titulo de Eleitor]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="2" />
+            <xs:maxLength value="11" />
+            <xs:pattern value="[1-9][0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="zona">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Zona do titulo de eleitor]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="5" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="secao">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Secao do titulo de eleitor]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="5" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

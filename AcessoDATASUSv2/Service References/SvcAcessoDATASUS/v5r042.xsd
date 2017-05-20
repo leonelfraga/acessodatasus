@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/nomesocial" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/nomesocial" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o nome social de uma pessoa fisica.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="NomeSocial" type="NomeSocialType" />
+  <xs:simpleType name="NomeSocialType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="70" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

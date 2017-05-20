@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/v1r2/municipio" xmlns:uf="http://servicos.saude.gov.br/schema/corporativo/v1r1/uf" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/v1r2/municipio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A98ff4e10-ea47-480c-a282-a243fb58aa3d" id="uf" namespace="http://servicos.saude.gov.br/schema/corporativo/v1r1/uf" />
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema contem informacoes a respeito dos
+			Municipios existentes no Brasil
+			(ativos e desativados).
+		]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="Municipio" type="MunicipioType" />
+  <xs:complexType name="MunicipioType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="codigoMunicipio">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Codigo IBGE do Municipio.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="6" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="nomeMunicipio" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nome do Municipio.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="UF" type="uf:UFType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Unidade da Federacao.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

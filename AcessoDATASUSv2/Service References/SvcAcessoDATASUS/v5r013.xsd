@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:orgaoemissor="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/orgaoemissor" xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/ric" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/ric" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ad4b0ac49-8770-4637-95a7-6ed4344847df" id="orgaoemissor" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/orgaoemissor">
+    <xs:annotation>
+      <xs:documentation><![CDATA[Importacao do metadado orgao emissor. Ex: Secretaria de Seguranca Publica,
+				Conselho Regional de Quimica etc.]]></xs:documentation>
+    </xs:annotation>
+  </xs:import>
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o RIC (Registro de Identificacao Civil), definido nos
+			termos do DECRETO N.7.166, de
+			05/05/2010 e das LEIS N.12.058, de 13/10/2009 e N.9.454, de 7 de
+			Abril de 1997.
+		]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="RIC" type="RICType" />
+  <xs:complexType name="RICType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identificador" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código de identificação.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="numeroRIC">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do RIC.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="11" />
+            <xs:maxLength value="11" />
+            <xs:pattern value="[1-9][0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="dataValidade" type="xs:date">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Data de validade do RIC.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="dataExpedicao" type="xs:date">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Data de expedicao do RIC (localizada no verso do cartao).]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="OrgaoEmissor" type="orgaoemissor:OrgaoEmissorType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Orgao emissor do documento de identidade.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/tiposanguineo" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/tiposanguineo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Tipo sanguíneo]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="TipoSanguineo" type="TipoSanguineoType" />
+  <xs:simpleType name="TipoSanguineoType">
+    <xs:annotation>
+      <xs:documentation><![CDATA[Tipo sanguíneo]]></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

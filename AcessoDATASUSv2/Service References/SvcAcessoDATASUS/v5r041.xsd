@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/v1r2/pais" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/v1r2/pais" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema contem informacoes sobre paises.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="Pais" type="PaisType" />
+  <xs:complexType name="PaisType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="codigoPais">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Codigo de identificacao do Pais (SIA e SIH).]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="codigoPaisAntigo">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Codigo antigo de identificacao do Pais.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="nomePais" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nome do Pais.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

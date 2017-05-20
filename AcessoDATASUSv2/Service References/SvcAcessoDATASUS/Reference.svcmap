@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b88feb37-6335-4593-821c-d608669efe97" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="v5r0.xsd" MetadataType="Schema" ID="70398f3c-1046-4997-995c-0e822061efb0" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:872a717c-731f-4316-be9d-1636f30f9b50" />
+    <MetadataFile FileName="v5r01.xsd" MetadataType="Schema" ID="a1de53be-9709-4d50-adb0-a1c0752bfd96" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:bce42fe7-3157-479a-864a-dc5ebea1d995" />
+    <MetadataFile FileName="v5r02.xsd" MetadataType="Schema" ID="df21c361-7e76-4d31-86cb-e30f993fff02" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:5a424930-0e98-4554-957d-bfbf21e5ebfd" />
+    <MetadataFile FileName="v5r03.xsd" MetadataType="Schema" ID="a007845c-1f4c-4ed7-9a91-6f329a8a9e2d" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:4b21777a-6bc6-4ac3-8cea-fd2a9a7c405c" />
+    <MetadataFile FileName="v5r04.xsd" MetadataType="Schema" ID="91ba6d48-1734-4a92-b38f-b9bba771c327" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:1f218339-d3bc-4d1c-8e0b-32dc42cfbe3b" />
+    <MetadataFile FileName="v5r05.xsd" MetadataType="Schema" ID="008712e9-6bdf-494c-8d8a-556b05899cab" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:b5dc8f79-23d7-4cfd-a289-061adcdeccff" />
+    <MetadataFile FileName="v5r06.xsd" MetadataType="Schema" ID="ffe4e86c-acc4-443d-9eb5-0970a94c9cf4" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:9ef2fdea-445c-45c0-b601-472e795cc654" />
+    <MetadataFile FileName="v5r07.xsd" MetadataType="Schema" ID="b643bb72-8f7d-4004-99b4-84126d819a04" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:cc6b0922-2334-4edd-ba40-871772714614" />
+    <MetadataFile FileName="v5r08.xsd" MetadataType="Schema" ID="8edaba1f-5864-465c-a45f-fd39ba39e3a7" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:3181765f-770e-473b-aa15-6fd6e2b02ff2" />
+    <MetadataFile FileName="v5r09.xsd" MetadataType="Schema" ID="0f1c02dc-0801-4dfd-829d-491267615642" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:54b5d5f3-62ae-46c5-b946-de89bce3c521" />
+    <MetadataFile FileName="v5r010.xsd" MetadataType="Schema" ID="0a90f3d5-6d5a-45d2-86c8-bb14df25add8" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:05b7a77e-d941-4cb8-b1b0-77252d2216e4" />
+    <MetadataFile FileName="v5r011.xsd" MetadataType="Schema" ID="6a0c3604-6edf-48ba-836f-abe9670e2ec3" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:68e32704-b1f1-44d7-9ae2-24ff5871f995" />
+    <MetadataFile FileName="v5r012.xsd" MetadataType="Schema" ID="e415ba61-22b3-4f5b-9250-bca615bd2c10" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:fe0b8fae-f9ad-48d7-82dd-cae33870df0a" />
+    <MetadataFile FileName="v5r013.xsd" MetadataType="Schema" ID="c709564d-59ca-43a8-9a86-4e1f67756eaa" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:9f7fc722-e589-42db-a5d6-3850cc320776" />
+    <MetadataFile FileName="v5r014.xsd" MetadataType="Schema" ID="e3910a5c-4cab-4c36-9fa0-14372705a82e" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:c18aca46-f4b1-4437-ba84-84afceac852d" />
+    <MetadataFile FileName="v5r015.xsd" MetadataType="Schema" ID="333e348a-0624-477c-9af2-5cc52b3e0f1b" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:0a48f59a-b4c0-4bae-bd2a-deabd347a179" />
+    <MetadataFile FileName="v5r016.xsd" MetadataType="Schema" ID="6edb367f-8ff2-48e1-8540-863885a98cb8" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:05a5bce6-06f9-4343-947d-c2dc99fd5a87" />
+    <MetadataFile FileName="v5r017.xsd" MetadataType="Schema" ID="7dea5178-0af6-4ce3-9249-6d6ccd3ab544" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:4215a726-eae8-42b7-88c3-c14ceda19eab" />
+    <MetadataFile FileName="v5r018.xsd" MetadataType="Schema" ID="e8926c3d-59ba-41de-aa08-3eb555d4fb51" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:71310067-06f2-45ee-8646-82e9b13ee3b3" />
+    <MetadataFile FileName="v5r019.xsd" MetadataType="Schema" ID="e829d29b-ae31-4bc2-92fc-85f159954eec" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:0285599c-839a-4462-b330-0711401a95e7" />
+    <MetadataFile FileName="v5r020.xsd" MetadataType="Schema" ID="56828562-d2d0-49e7-8ff3-7f79f0b0e0d8" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:9ec00cad-079c-4f05-b541-ceff49c2ee15" />
+    <MetadataFile FileName="v5r021.xsd" MetadataType="Schema" ID="23c036cb-00aa-4b1e-8783-685e9a0c10ab" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:f9e67d7f-125c-4f30-969d-4e1fbd9c638e" />
+    <MetadataFile FileName="v5r022.xsd" MetadataType="Schema" ID="f535c178-bd48-4ca2-b384-b807292f5cd8" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:5c464e04-7c33-4801-b525-61d9f956dd1d" />
+    <MetadataFile FileName="v5r023.xsd" MetadataType="Schema" ID="04e9a81b-6115-4663-ba5b-2e8948c3414e" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:f8e1d6de-16db-4127-a4c5-ea892f54323d" />
+    <MetadataFile FileName="v5r024.xsd" MetadataType="Schema" ID="13f14786-c48f-42e4-ac8b-ff40ac5a6885" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:69334506-66d0-4ba7-90a8-d4852fd61c76" />
+    <MetadataFile FileName="v5r025.xsd" MetadataType="Schema" ID="c00193e9-1914-4b84-9dc8-71a03fe94680" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:36120010-d4f0-4c7a-bb17-6fd32d2181e9" />
+    <MetadataFile FileName="v5r026.xsd" MetadataType="Schema" ID="2dcd1d61-3692-435c-bfdf-7e2ad36327c3" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:2d07b707-3373-4305-a361-28bdacc25054" />
+    <MetadataFile FileName="v5r027.xsd" MetadataType="Schema" ID="4025c5e9-0896-44e6-b899-ef2809d46484" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:f987543c-ccb5-4e6e-a33e-a9b174322e0e" />
+    <MetadataFile FileName="v5r028.xsd" MetadataType="Schema" ID="41bde02d-3255-4d3a-99b4-88da0792789c" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:5eff1bd4-0c69-4ab7-8200-fd65f58f0084" />
+    <MetadataFile FileName="v5r029.xsd" MetadataType="Schema" ID="420359fd-c74f-4b3a-bae6-05fae443f37e" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:f6d3ad04-d97e-485b-b9e0-c0fad705d9c6" />
+    <MetadataFile FileName="v5r030.xsd" MetadataType="Schema" ID="0a25f787-2e0b-4dc6-ab23-51174d25acfa" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:7519b649-dea3-40fc-b94e-6fb61410de7c" />
+    <MetadataFile FileName="v5r031.xsd" MetadataType="Schema" ID="eb9450f6-9c7a-499d-8bd6-9bb6638320c0" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:364da4a9-22a7-4ce0-abae-78c7455231fc" />
+    <MetadataFile FileName="v5r032.xsd" MetadataType="Schema" ID="610ee156-3d08-453b-b575-d9d076978dce" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:f252aa6e-80fb-455a-91eb-e471be4bb66a" />
+    <MetadataFile FileName="v5r033.xsd" MetadataType="Schema" ID="0fd6950a-0d33-439e-af51-a9637be2991a" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:e49e4a69-8562-4c5c-9311-481be20e80f1" />
+    <MetadataFile FileName="v5r034.xsd" MetadataType="Schema" ID="67946492-52a9-4068-8163-b1a36c4b28a4" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:18b9297d-7606-4e79-b170-825e4df9adb2" />
+    <MetadataFile FileName="v5r035.xsd" MetadataType="Schema" ID="2ad5b42a-4db6-4c4d-a715-a5d997a3bea2" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:e3fb9983-83d7-438a-9045-f1c752b19015" />
+    <MetadataFile FileName="v5r036.xsd" MetadataType="Schema" ID="ebcd4e26-ff79-4285-9baa-01d97b92752d" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:98ff4e10-ea47-480c-a282-a243fb58aa3d" />
+    <MetadataFile FileName="v5r037.xsd" MetadataType="Schema" ID="650b0e2b-cabf-4ba7-b97e-ff6d31e4bd07" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:aa6a0d47-4163-4903-8c5d-9b2127c97f7d" />
+    <MetadataFile FileName="v5r038.xsd" MetadataType="Schema" ID="225bae56-cc63-4d2b-a35c-283a07f88d75" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:7fbeb6d4-d435-4f8e-b2c9-6caa8aec4b4d" />
+    <MetadataFile FileName="v5r039.xsd" MetadataType="Schema" ID="293dde89-b012-4ca1-80c4-cd2233b6d3ad" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:54038378-a70d-4d71-94f3-332e4a0e67e8" />
+    <MetadataFile FileName="v5r040.xsd" MetadataType="Schema" ID="04ebbf0c-1e7a-47e0-963d-44fef14057f1" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:96b24ed7-fd90-4ebc-abb3-0d134ded3f07" />
+    <MetadataFile FileName="v5r041.xsd" MetadataType="Schema" ID="eeda79ec-8c7f-47da-80b4-d4b4ab4061c8" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:ad2fe836-0cf0-48be-8147-36fe69f6ca47" />
+    <MetadataFile FileName="v5r042.xsd" MetadataType="Schema" ID="76a19a29-99ce-4966-8242-80f4af38a1d8" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:4af61ab2-81ce-4237-b423-1bc47321f5a9" />
+    <MetadataFile FileName="v5r043.xsd" MetadataType="Schema" ID="a800d577-afa7-4853-8446-1df522e85c73" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:9c777909-74c2-458a-8a9d-609788b4b238" />
+    <MetadataFile FileName="v5r044.xsd" MetadataType="Schema" ID="b8ee6ee3-6d63-45e1-b857-0acaf79459eb" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:118da934-b18a-496f-b19f-f52d3a3b74ff" />
+    <MetadataFile FileName="CadsusService.wsdl" MetadataType="Wsdl" ID="5c9e3209-bcb3-4f63-8980-3e82ae11d224" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?wsdl" />
+    <MetadataFile FileName="v5r045.xsd" MetadataType="Schema" ID="4527c21b-839c-48fd-85a3-135d3ae4e828" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:d4b0ac49-8770-4637-95a7-6ed4344847df" />
+    <MetadataFile FileName="v5r046.xsd" MetadataType="Schema" ID="5fe892f2-9364-41bf-85a6-807f9f8c1c64" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:b0609468-befc-4fea-bed7-4986b8377c47" />
+    <MetadataFile FileName="v5r047.xsd" MetadataType="Schema" ID="cf2e7556-37ca-487b-9f38-bca8085f1892" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:68af7923-43a8-425f-a6d1-2b553fed9f7e" />
+    <MetadataFile FileName="v5r048.xsd" MetadataType="Schema" ID="4f7193f0-20c8-4615-8cdc-90c17848c4aa" SourceId="1" SourceUrl="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema:03f08e1f-9086-43d3-bd97-4a6ca5322b35" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

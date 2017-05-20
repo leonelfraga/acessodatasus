@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/v1r1/fotografia" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/v1r1/fotografia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa fotografia.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="Fotografia" type="FotografiaType" />
+  <xs:complexType name="FotografiaType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identificador" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código de identificação.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="dataCaptura" type="xs:date">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Data da captura da fotografia.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="identificadorImagem">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código de identificação da imagem que foi enviada pelo serviço de upload de imagens para fotografias do usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:nonNegativeInteger">
+            <xs:maxInclusive value="999999999999999" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="bytesImagem" type="xs:base64Binary">
+        <xs:annotation>
+          <xs:documentation><![CDATA[A imagem da fotografia, em formato base64.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:cpf="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/cpf" xmlns:municipio="http://servicos.saude.gov.br/schema/corporativo/v1r2/municipio" xmlns:nomecompleto="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/nomecompleto" xmlns="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/filtropesquisa" xmlns:tipoDocumento="http://servicos.saude.gov.br/schema/corporativo/documento/v5r0/tipodocumento" xmlns:nomesocial="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/nomesocial" xmlns:nomefamilia="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r0/nomefamilia" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/filtropesquisa" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Af987543c-ccb5-4e6e-a33e-a9b174322e0e" id="nomecompleto" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/nomecompleto" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A4af61ab2-81ce-4237-b423-1bc47321f5a9" id="nomesocial" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/nomesocial" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A7fbeb6d4-d435-4f8e-b2c9-6caa8aec4b4d" id="nomefamilia" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r0/nomefamilia" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A2d07b707-3373-4305-a361-28bdacc25054" id="municipio" namespace="http://servicos.saude.gov.br/schema/corporativo/v1r2/municipio" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ae49e4a69-8562-4c5c-9311-481be20e80f1" id="cpf" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/cpf" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A9ec00cad-079c-4f05-b541-ceff49c2ee15" id="tipoDocumento" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v5r0/tipodocumento" />
+  <xs:annotation>
+    <xs:documentation>Representa o objeto de filtro da pesquisa do usuario SUS.</xs:documentation>
+  </xs:annotation>
+  <xs:element name="FiltroPesquisa">
+    <xs:annotation>
+      <xs:documentation>Representa o objeto de filtro da pesquisa do
+				usuario SUS.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="nomeCompleto" type="nomecompleto:NomeCompletoType">
+          <xs:annotation>
+            <xs:documentation>Nome completo do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="nomeSocial" type="nomesocial:NomeSocialType">
+          <xs:annotation>
+            <xs:documentation>Nome social do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="nomeFamilia" type="nomefamilia:NomeFamiliaType">
+          <xs:annotation>
+            <xs:documentation>Nome da familia do usuário SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="dataNascimento" type="xs:date">
+          <xs:annotation>
+            <xs:documentation>Data de nascimento do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="Mae" type="nomecompleto:NomeCompletoType">
+          <xs:annotation>
+            <xs:documentation>Nome da mae do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="Pai" type="nomecompleto:NomeCompletoType">
+          <xs:annotation>
+            <xs:documentation>Nome do pai do usuario do SUS.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="CPF" type="cpf:CPFType">
+          <xs:annotation>
+            <xs:documentation>CPF do usuário.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="MunicipioNascimento" type="municipio:MunicipioType">
+          <xs:annotation>
+            <xs:documentation>
+							Municipio de nascimento do usuario SUS (usado
+							apenas para usuarios nascidos no Brasil).
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="TipoDocumento" type="tipoDocumento:TipoDocumentoType">
+          <xs:annotation>
+            <xs:documentation>Tipo de Documento.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="numeroDocumento" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Numero do Documento.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="tipoPesquisa" type="TipoPesquisaType">
+          <xs:annotation>
+            <xs:documentation>Determina o tipo de pesquisa a ser realizada.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="situacao" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Situação: Ativo / Inativo.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="TipoPesquisaType">
+    <xs:annotation>
+      <xs:documentation>Identifica o tipo de pesquisa a ser realizada.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IDENTICA" />
+      <xs:enumeration value="APROXIMADA" />
+      <xs:enumeration value="FONETICA" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

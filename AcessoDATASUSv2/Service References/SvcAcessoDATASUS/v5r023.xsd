@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:identidade="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/identidade" xmlns:tituloeleitor="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/tituloeleitor" xmlns:ric="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/ric" xmlns:cnh="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/cnh" xmlns:dnv="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/dnv" xmlns:ctps="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/ctps" xmlns:nis="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/nis" xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/documentos" xmlns:passaporte="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/passaporte" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/documentos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Af6d3ad04-d97e-485b-b9e0-c0fad705d9c6" id="cnh" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/cnh" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A71310067-06f2-45ee-8646-82e9b13ee3b3" id="ctps" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/ctps" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A9c777909-74c2-458a-8a9d-609788b4b238" id="identidade" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/identidade" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A03f08e1f-9086-43d3-bd97-4a6ca5322b35" id="nis" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/nis" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A0a48f59a-b4c0-4bae-bd2a-deabd347a179" id="passaporte" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/passaporte" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A9f7fc722-e589-42db-a5d6-3850cc320776" id="ric" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/ric" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A54b5d5f3-62ae-46c5-b946-de89bce3c521" id="tituloeleitor" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/tituloeleitor" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ac18aca46-f4b1-4437-ba84-84afceac852d" id="dnv" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/dnv" />
+  <xs:annotation>
+    <xs:documentation>Este esquema representa o conjunto de documentos de
+			uma pessoa fisica.
+		</xs:documentation>
+  </xs:annotation>
+  <xs:element name="Documentos" type="DocumentosType" />
+  <xs:complexType name="DocumentosType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Identidade" type="identidade:IdentidadeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CTPS" type="ctps:CTPSType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CNH" type="cnh:CNHType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TituloEleitor" type="tituloeleitor:TituloEleitorType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NIS" type="nis:NISType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Passaporte" type="passaporte:PassaporteType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RIC" type="ric:RICType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DNV" type="dnv:DNVType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

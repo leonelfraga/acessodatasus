@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/etniaindigena" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/etniaindigena" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Esta tabela Contem os codigos e as respectivas descricoes da etnia dos povos indigenas para auxiliar no monitoramento do atendimento desta populacao no SUS. Atendento a PORTARIA Nº 508, DE 28 DE SETEMBRO DE 2010.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="EtniaIndigena" type="EtniaIndigenaType" />
+  <xs:complexType name="EtniaIndigenaType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="codigoEtniaIndigena">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código da etnia]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="4" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descricaoEtniaIndigena" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Descricao da etnia.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

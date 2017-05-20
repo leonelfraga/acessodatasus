@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://servicos.saude.gov.br/cadsus/v5r0/cadsusservice" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msfalha="http://servicos.saude.gov.br/wsdl/mensageria/falha/v5r0/msfalha" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" name="CadsusService" targetNamespace="http://servicos.saude.gov.br/cadsus/v5r0/cadsusservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A5eff1bd4-0c69-4ab7-8200-fd65f58f0084" namespace="http://servicos.saude.gov.br/cadsus/v5r0/cadsusservice" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="requestPesquisar">
+    <wsdl:part name="requestPesquisar" element="tns:requestPesquisar" />
+  </wsdl:message>
+  <wsdl:message name="responsePesquisar">
+    <wsdl:part name="responsePesquisar" element="tns:responsePesquisar" />
+  </wsdl:message>
+  <wsdl:message name="requestConsultar">
+    <wsdl:part name="requestConsultar" element="tns:requestConsultar" />
+  </wsdl:message>
+  <wsdl:message name="responseConsultar">
+    <wsdl:part name="responseConsultar" element="tns:responseConsultar" />
+  </wsdl:message>
+  <wsdl:message name="requestIncluir">
+    <wsdl:part name="requestIncluir" element="tns:requestIncluir" />
+  </wsdl:message>
+  <wsdl:message name="responseIncluir">
+    <wsdl:part name="responseIncluir" element="tns:responseIncluir" />
+  </wsdl:message>
+  <wsdl:message name="requestAtualizar">
+    <wsdl:part name="requestAtualizar" element="tns:requestAtualizar" />
+  </wsdl:message>
+  <wsdl:message name="responseAtualizar">
+    <wsdl:part name="responseAtualizar" element="tns:responseAtualizar" />
+  </wsdl:message>
+  <wsdl:message name="requestAlterarSituacao">
+    <wsdl:part name="requestAlterarSituacao" element="tns:requestAlterarSituacao" />
+  </wsdl:message>
+  <wsdl:message name="responseAlterarSituacao">
+    <wsdl:part name="responseAlterarSituacao" element="tns:responseAlterarSituacao" />
+  </wsdl:message>
+  <wsdl:message name="requestCalcularGrauDeQualidade">
+    <wsdl:part name="requestCalcularGrauDeQualidade" element="tns:requestCalcularGrauDeQualidade" />
+  </wsdl:message>
+  <wsdl:message name="responseCalcularGrauDeQualidade">
+    <wsdl:part name="responseCalcularGrauDeQualidade" element="tns:responseCalcularGrauDeQualidade" />
+  </wsdl:message>
+  <wsdl:message name="CadsusFault">
+    <wsdl:part name="fault" element="msfalha:MSFalha" />
+  </wsdl:message>
+  <wsdl:portType name="CadsusServicePortType">
+    <wsdl:operation name="pesquisar">
+      <wsdl:documentation>
+				 Pesquisar os Usuarios do SUS por Filtro. 
+			</wsdl:documentation>
+      <wsdl:input name="requestPesquisar" message="tns:requestPesquisar" />
+      <wsdl:output name="responsePesquisar" message="tns:responsePesquisar" />
+      <wsdl:fault name="CadsusFault" message="tns:CadsusFault" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar">
+      <wsdl:documentation>
+				 Consultar o Usuario do SUS por numero do CNS - Cartao Nacional de Saude.
+			</wsdl:documentation>
+      <wsdl:input name="requestConsultar" message="tns:requestConsultar" />
+      <wsdl:output name="responseConsultar" message="tns:responseConsultar" />
+      <wsdl:fault name="CadsusFault" message="tns:CadsusFault" />
+    </wsdl:operation>
+    <wsdl:operation name="incluir">
+      <wsdl:documentation>
+				 Incluir um Usuario Cidadao do SUS.
+			</wsdl:documentation>
+      <wsdl:input name="requestIncluir" message="tns:requestIncluir" />
+      <wsdl:output name="responseIncluir" message="tns:responseIncluir" />
+      <wsdl:fault name="CadsusFault" message="tns:CadsusFault" />
+    </wsdl:operation>
+    <wsdl:operation name="atualizar">
+      <wsdl:documentation>
+				 Atualizar um Usuario Cidadao do SUS.
+			</wsdl:documentation>
+      <wsdl:input name="requestAtualizar" message="tns:requestAtualizar" />
+      <wsdl:output name="responseAtualizar" message="tns:responseAtualizar" />
+      <wsdl:fault name="CadsusFault" message="tns:CadsusFault" />
+    </wsdl:operation>
+    <wsdl:operation name="alterarSituacao">
+      <wsdl:documentation>
+				 Alterar situação de um Usuario do SUS.
+			</wsdl:documentation>
+      <wsdl:input name="requestAlterarSituacao" message="tns:requestAlterarSituacao" />
+      <wsdl:output name="responseAlterarSituacao" message="tns:responseAlterarSituacao" />
+      <wsdl:fault name="CadsusFault" message="tns:CadsusFault" />
+    </wsdl:operation>
+    <wsdl:operation name="calcularGrauDeQualidade">
+      <wsdl:documentation>
+				 Alterar situação de um Usuario do SUS.
+			</wsdl:documentation>
+      <wsdl:input name="requestCalcularGrauDeQualidade" message="tns:requestCalcularGrauDeQualidade" />
+      <wsdl:output name="responseCalcularGrauDeQualidade" message="tns:responseCalcularGrauDeQualidade" />
+      <wsdl:fault name="CadsusFault" message="tns:CadsusFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CadsusServiceSOAP12Binding" type="tns:CadsusServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="pesquisar">
+      <wsdl:documentation>Pesquisar os Usuarios do SUS por Filtro.
+			</wsdl:documentation>
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap12:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultar">
+      <wsdl:documentation>Consultar o Usuario do SUS por numero do CNS -
+				Cartao Nacional de Saude.
+			</wsdl:documentation>
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap12:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="incluir">
+      <wsdl:documentation>Incluir um Usuario Cidadao do SUS.
+			</wsdl:documentation>
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap12:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="atualizar">
+      <wsdl:documentation>Atualizar um Usuario Cidadao do SUS.
+			</wsdl:documentation>
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap12:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="alterarSituacao">
+      <wsdl:documentation>Alterar situação de um Usuario do SUS.
+			</wsdl:documentation>
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap12:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="calcularGrauDeQualidade">
+      <wsdl:documentation>Calcular o grau de qualidade do registro do Usuario do SUS.
+			</wsdl:documentation>
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap12:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CadsusServiceSOAP11Binding" type="tns:CadsusServicePortType">
+    <soap11:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="pesquisar">
+      <wsdl:documentation>Pesquisar os Usuarios do SUS por Filtro.
+			</wsdl:documentation>
+      <soap11:operation soapAction="" />
+      <wsdl:input>
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap11:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultar">
+      <wsdl:documentation>Consultar o Usuario do SUS por numero do CNS -
+				Cartao Nacional de Saude.
+			</wsdl:documentation>
+      <soap11:operation soapAction="" />
+      <wsdl:input>
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap11:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="incluir">
+      <wsdl:documentation>Incluir um Usuario Cidadao do SUS.
+			</wsdl:documentation>
+      <soap11:operation soapAction="" />
+      <wsdl:input>
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap11:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="atualizar">
+      <wsdl:documentation>Atualizar um Usuario Cidadao do SUS.
+			</wsdl:documentation>
+      <soap11:operation soapAction="" />
+      <wsdl:input>
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap11:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="alterarSituacao">
+      <wsdl:documentation>Alterar situação de um Usuario do SUS.
+			</wsdl:documentation>
+      <soap11:operation soapAction="" />
+      <wsdl:input>
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap11:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="calcularGrauDeQualidade">
+      <wsdl:documentation>Calcular o grau de qualidade do registro do Usuario do SUS.
+			</wsdl:documentation>
+      <soap11:operation soapAction="" />
+      <wsdl:input>
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CadsusFault">
+        <soap11:fault use="literal" name="CadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CadsusService">
+    <wsdl:port name="CadsusServicePort" binding="tns:CadsusServiceSOAP12Binding">
+      <soap12:address location="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0" />
+    </wsdl:port>
+    <wsdl:port name="CadsusServiceSOAP11Port" binding="tns:CadsusServiceSOAP11Binding">
+      <soap11:address location="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

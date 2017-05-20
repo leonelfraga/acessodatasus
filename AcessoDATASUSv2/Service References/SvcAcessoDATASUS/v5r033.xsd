@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/cpf" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/cpf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o documento Cadastro Nacional de Pessoas Fisicas (CPF) da Receita Federal do Brasil.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="CPF" type="CPFType" />
+  <xs:complexType name="CPFType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="numeroCPF">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation><![CDATA[Numero do CPF sem formatacao. Ex: 09999999999]]></xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="11" />
+            <xs:maxLength value="11" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r1/bairro" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r1/bairro" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa bairro.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="Bairro" type="BairroType" />
+  <xs:complexType name="BairroType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="codigoBairro">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código do bairro.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="8" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descricaoBairro">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Descrição do bairro.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="72" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

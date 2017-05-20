@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tipoLogradouro="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r1/tipologradouro" xmlns:municipio="http://servicos.saude.gov.br/schema/corporativo/v1r2/municipio" xmlns:pais="http://servicos.saude.gov.br/schema/corporativo/v1r2/pais" xmlns="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r2/endereco" xmlns:bairro="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r1/bairro" xmlns:cep="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r1/cep" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r2/endereco" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A2d07b707-3373-4305-a361-28bdacc25054" id="municipio" namespace="http://servicos.saude.gov.br/schema/corporativo/v1r2/municipio" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Aad2fe836-0cf0-48be-8147-36fe69f6ca47" id="pais" namespace="http://servicos.saude.gov.br/schema/corporativo/v1r2/pais" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Af9e67d7f-125c-4f30-969d-4e1fbd9c638e" id="tipoLogradouro" namespace="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r1/tipologradouro" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A68af7923-43a8-425f-a6d1-2b553fed9f7e" id="bairro" namespace="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r1/bairro" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Af252aa6e-80fb-455a-91eb-e471be4bb66a" id="cep" namespace="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r1/cep" />
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa um endereco.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="Endereco" type="EnderecoType" />
+  <xs:complexType name="EnderecoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identificador" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código de identificação.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoEndereco" type="TipoEnderecoType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Tipo de Endereco (1 = comercial, 2 = residencial).]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoLogradouro" type="tipoLogradouro:TipoLogradouroType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Tipo de Logradouro. Conforme tabela de codigo de
+						Logradouro.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="nomeLogradouro">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nome do logradouro. Ex: Dr. Joaquim Lucio]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="250" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="numero">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do logradouro. Ex: 10]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="7" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="complemento">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Complemento do endereco. Ex: Entrada A, AP 1673]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Bairro" type="bairro:BairroType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Bairro do endereco. Ex: Setor Jardim Botanico]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="CEP" type="cep:CEPType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[CEP do endereco. Ex: 70000000 (sem formatacao)]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Municipio" type="municipio:MunicipioType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Municipio do endereco.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Pais" type="pais:PaisType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Pais de endereço.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="municipioInternacional">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nome do municipio onde reside o usuario, caso o
+						pais nao seja Brasil.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="70" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TipoEnderecoType">
+    <xs:annotation>
+      <xs:documentation><![CDATA[Tipo de Endereco (1 = comercial, 2 = residencial).]]></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1" />
+      <xs:enumeration value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/orgaoemissor" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/orgaoemissor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o orgao emissor de um documento. Ex: Secretaria de Seguranca Publica, Conselho Regional de Quimica etc.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="OrgaoEmissor" type="OrgaoEmissorType" />
+  <xs:complexType name="OrgaoEmissorType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="codigoOrgaoEmissor">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Codigo do orgao emissor de documento, conforme definido pelo Ministerio da Saude.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="3" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="nomeOrgaoEmissor" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nome do orgao emissor de documento.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="siglaOrgaoEmissor" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Sigla do orgao emissor de documento.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

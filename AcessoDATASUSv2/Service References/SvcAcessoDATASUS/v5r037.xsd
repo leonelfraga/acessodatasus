@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tipocertidao="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/tipocertidao" xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/certidaoantiga" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/certidaoantiga" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ab5dc8f79-23d7-4cfd-a289-061adcdeccff" id="tipocertidao" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/tipocertidao" />
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa uma Certidao, emitida por um Servico de Registro Civil (Cartorio), no modelo antigo.
+		]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="CertidaoAntiga" type="CertidaoAntigaType" />
+  <xs:complexType name="CertidaoAntigaType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identificador" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código de identificação.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="TipoCertidao" type="tipocertidao:TipoCertidaoType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Tipo da certidao.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="nomeCartorio">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nome do Cartorio onde a Certidao foi registrada. Se este elemento estiver presente, o elemento
+						numeroCartorio devera estar ausente.
+					]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+            <xs:pattern value="[-0-9A-Z ]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="livro">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do Livro em que a Certidao foi registrada.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="8" />
+            <xs:pattern value="[-0-9A-Z]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="folha">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero da Folha em que a Certidao foi registrada.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="4" />
+            <xs:pattern value="[-0-9A-Z]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="termo">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do Termo.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="8" />
+            <xs:pattern value="[-0-9A-Z]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="dataEmissao" type="xs:date">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Data de emissao da certida.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/cnesusuario" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/cnesusuario" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CNESUsuario" type="CNESUsuarioType" />
+  <xs:complexType name="CNESUsuarioType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="CNES">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do CNES utilizado pelo operador.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="Usuario">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Identificacao utilizada pelo operador.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Senha">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Senha utilizada pelo operador.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

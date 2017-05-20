@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorcorporativo" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorcorporativo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o registro de identificadores corporativos, isto e, identificadores usados por sistemas municipais, regionais, estaduais e/ou de uma unidade de saude especifica, de um usuario do SUS.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="IdentificadorCorporativo" type="IdentificadorCorporativoType" />
+  <xs:complexType name="IdentificadorCorporativoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="numeroIdentificadorCorporativo">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Número do identificador corporativo do usuario do SUS.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaIdentificadoresCorporativos" type="ListaIdentificadoresCorporativosType" />
+  <xs:complexType name="ListaIdentificadoresCorporativosType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" ref="IdentificadorCorporativo" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

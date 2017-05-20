@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/v1r1/uf" xmlns:pais="http://servicos.saude.gov.br/schema/corporativo/v1r2/pais" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/v1r1/uf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema contem informacoes referentes as Unidades Federativas.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="UF" type="UFType" />
+  <xs:complexType name="UFType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="codigoUF" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Codigo IBGE da Unidade da Federacao.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="siglaUF" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Sigla da Unidade da Federacao.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="codigoRegiao" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Contem informacoes referentes as 5 regioes do Brasil (tambem denominadas macrorregioes).]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="nomeUF" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nome da Unidade da Federacao.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

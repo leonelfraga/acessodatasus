@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorlocal" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorlocal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o registro de identificadores locais, isto e, identificadores usados por sistemas municipais, regionais, estaduais e/ou de uma unidade de saude especifica, de um usuario do SUS.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="IdentificadorLocal" type="IdentificadorLocalType" />
+  <xs:complexType name="IdentificadorLocalType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="numeroIdentificadorLocal">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do identificador local do usuario do SUS.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="identificadorSistema">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero fornecido pelo MS que identifica qual sistema está se integrando.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="25" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

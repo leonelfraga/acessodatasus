@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61EEBBAB-9BE6-4B26-A57F-DD5163E972DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AcessoDATASUSv2</RootNamespace>
+    <AssemblyName>AcessoDATASUSv2</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsultaCADSUS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SvcAcessoDATASUS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\AcessoDATASUSv2.SvcAcessoDATASUS.responseAlterarSituacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\AcessoDATASUSv2.SvcAcessoDATASUS.responseAtualizar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\AcessoDATASUSv2.SvcAcessoDATASUS.responseCalcularGrauDeQualidade.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\AcessoDATASUSv2.SvcAcessoDATASUS.responseConsultar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\AcessoDATASUSv2.SvcAcessoDATASUS.responseIncluir.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\AcessoDATASUSv2.SvcAcessoDATASUS.ResultadoPesquisa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\CadsusService.wsdl" />
+    <None Include="Service References\SvcAcessoDATASUS\v5r0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r010.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r011.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r012.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r013.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r014.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r015.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r016.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r017.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r018.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r019.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r020.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r021.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r022.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r023.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r024.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r025.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r026.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r027.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r028.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r029.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r030.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r031.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r032.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r033.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r034.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r035.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r036.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r037.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r038.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r039.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r04.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r040.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r041.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r042.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r043.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r044.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r045.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r046.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r047.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r048.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r05.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r06.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r08.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SvcAcessoDATASUS\v5r09.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SvcAcessoDATASUS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SvcAcessoDATASUS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SvcAcessoDATASUS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SvcAcessoDATASUS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

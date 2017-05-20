@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r0/nomefamilia" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r0/nomefamilia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o nome da familia de uma pessoa fisica.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="NomeFamilia" type="NomeFamiliaType" />
+  <xs:complexType name="NomeFamiliaType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Nome">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nomes atribuidos da pessoa fisica.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="70" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

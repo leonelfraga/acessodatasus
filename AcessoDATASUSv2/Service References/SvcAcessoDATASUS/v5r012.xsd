@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/cadsus/v5r0/grauqualidade" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/grauqualidade" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa Grau de qualidade de um cadastro de usuário do SUS.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="GrauQualidade" type="GrauQualidadeType" />
+  <xs:complexType name="GrauQualidadeType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="percentualQualidade">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Percentual de qualidade do cadastro.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

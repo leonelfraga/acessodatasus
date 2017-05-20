@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tipocertidao="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/tipocertidao" xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r2/certidao" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r2/certidao" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ab5dc8f79-23d7-4cfd-a289-061adcdeccff" id="tipocertidao" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/tipocertidao" />
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa um documento do tipo Certidao, emitida por um Servico de Registro Civil (Cartorio),
+			conforme o Modelo CNJ 2011.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="Certidao" type="CertidaoType" />
+  <xs:complexType name="CertidaoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identificador" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código de identificação.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="TipoCertidao" type="tipocertidao:TipoCertidaoType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Tipo da certidao.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="numeroCartorio">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do Cartorio - BLOCO 1 do Modelo CNJ 2011 (6 digitos).]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="6" />
+            <xs:maxLength value="6" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="acervo">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do Acervo - BLOCO 2 do Modelo CNJ 2011 (2 digitos).]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="2" />
+            <xs:maxLength value="2" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="servicoRegistroCivil">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do Servico de Registro Civil - BLOCO 3 do Modelo CNJ 2011 (2 digitos).]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="2" />
+            <xs:maxLength value="2" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="ano">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Ano do documento - BLOCO 4 do Modelo CNJ 2011 (4 digitos).]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="4" />
+            <xs:maxLength value="4" />
+            <xs:pattern value="[1-9][0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="tipoLivro">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Tipo da livro de registro - BLOCO 5 do Modelo CNJ 2011 (1 digito).]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="1" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="livro">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do Livro em que a Certidao foi registrada - BLOCO 6 do Modelo CNJ 2011 (5 digitos).
+					]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="5" />
+            <xs:maxLength value="5" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="folha">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero da Folha em que a Certidao foi registrada - BLOCO 7 do Modelo CNJ 2011 (3 digitos).
+					]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="3" />
+            <xs:maxLength value="3" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="termo">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do Termo - BLOCO 8 do Modelo CNJ 2011 (7 digitos).]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="7" />
+            <xs:maxLength value="7" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="digitoVerificador">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Digito Verificador - BLOCO 9 do Modelo CNJ 2011 (1 digito).]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="dataEmissao" type="xs:date">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Data de emissao da certidao.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

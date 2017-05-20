@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/v5r0/tipodocumento" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/v5r0/tipodocumento" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o tipo de documento.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="TipoDocumento" type="TipoDocumentoType" />
+  <xs:complexType name="TipoDocumentoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="tipoDocumento">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Tipos de Documentos]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="01">
+              <xs:annotation>
+                <xs:documentation><![CDATA[RG - REGISTRO GERAL / IDENTIDADE]]></xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="02">
+              <xs:annotation>
+                <xs:documentation><![CDATA[CPF - CADASTRO DE PESSOA FÍSICA]]></xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="03">
+              <xs:annotation>
+                <xs:documentation><![CDATA[CTPS - CARTEIRA DE TRABALHO E PREVIDENCIA SOCIA]]></xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="04">
+              <xs:annotation>
+                <xs:documentation><![CDATA[CNH - CARTEIRA NACIONAL DE HABILITACAO]]></xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="05">
+              <xs:annotation>
+                <xs:documentation><![CDATA[TITULO ELEITORAL]]></xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="06">
+              <xs:annotation>
+                <xs:documentation><![CDATA[NIS/PIS - NUMERO DE IDENTIFICACAO SOCIAL]]></xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="19">
+              <xs:annotation>
+                <xs:documentation><![CDATA[DNV - DECLARAÇÃO DE NASCIDO VIVO]]></xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="91">
+              <xs:annotation>
+                <xs:documentation><![CDATA[CERTIDAO DE NASCIMENTO]]></xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="92">
+              <xs:annotation>
+                <xs:documentation><![CDATA[CERTIDAO DE CASAMENTO]]></xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="93">
+              <xs:annotation>
+                <xs:documentation><![CDATA[CERTIDAO DE SEPARACAO OU DIVORCIO]]></xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="95">
+              <xs:annotation>
+                <xs:documentation><![CDATA[CERTIDAO ADMINISTRATIVA - ÍNDIO (RANI)]]></xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

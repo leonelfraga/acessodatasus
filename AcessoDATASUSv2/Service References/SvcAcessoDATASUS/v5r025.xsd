@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/certidoes" xmlns:certidao="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r2/certidao" xmlns:certidaoantiga="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/certidaoantiga" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/certidoes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A872a717c-731f-4316-be9d-1636f30f9b50" id="certidao" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r2/certidao" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Aaa6a0d47-4163-4903-8c5d-9b2127c97f7d" id="certidaoantiga" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/certidaoantiga" />
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o conjunto de certidões de uma pessoa física.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="Certidoes" type="CertidoesType" />
+  <xs:complexType name="CertidoesType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Certidao" type="certidao:CertidaoType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CertidaoAntiga" type="certidaoantiga:CertidaoAntigaType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

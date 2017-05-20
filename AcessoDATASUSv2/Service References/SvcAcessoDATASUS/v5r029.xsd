@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/cnh" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/cnh" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o documento Carteira Nacional de Habilitacao.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="CNH" type="CNHType" />
+  <xs:complexType name="CNHType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identificador" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código de identificação.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="numeroCNH">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero da Carteira Nacional de Habilitacao sem formatacao. Ex: 0999999999]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="2" />
+            <xs:maxLength value="11" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="dataEmissao" type="xs:date">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Data de emissao da Carteira Nacional de Habilitacao. A data de emissao encontra-se no verso da CNH.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="siglaUF" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Sigla da Unidade da Federacao que emitiu o documento]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:resultadopesquisa="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/resultadopesquisa" xmlns:msfalha="http://servicos.saude.gov.br/wsdl/mensageria/falha/v5r0/msfalha" xmlns:cns="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" xmlns:tns="http://servicos.saude.gov.br/cadsus/v5r0/cadsusservice" xmlns:fotografia="http://servicos.saude.gov.br/schema/corporativo/v1r1/fotografia" xmlns:identificadorlocal="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorlocal" xmlns:cnesusuario="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/cnesusuario" xmlns:email="http://servicos.saude.gov.br/schema/corporativo/v1r2/email" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:grauqualidade="http://servicos.saude.gov.br/schema/cadsus/v5r0/grauqualidade" xmlns:filtropesquisa="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/filtropesquisa" xmlns:merge="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/merge" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:usuariosus="http://servicos.saude.gov.br/schema/cadsus/v5r0/usuariosus" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/cadsus/v5r0/cadsusservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Abce42fe7-3157-479a-864a-dc5ebea1d995" id="cns" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A05b7a77e-d941-4cb8-b1b0-77252d2216e4" id="usuariosus" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/usuariosus" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A68e32704-b1f1-44d7-9ae2-24ff5871f995" id="identificadorlocal" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorlocal" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A5a424930-0e98-4554-957d-bfbf21e5ebfd" id="filtropesquisa" namespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/filtropesquisa" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ab0609468-befc-4fea-bed7-4986b8377c47" id="resultadopesquisa" namespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/resultadopesquisa" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A364da4a9-22a7-4ce0-abae-78c7455231fc" id="cnesusuario" namespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/cnesusuario" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Afe0b8fae-f9ad-48d7-82dd-cae33870df0a" id="grauqualidade" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/grauqualidade" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A05a5bce6-06f9-4343-947d-c2dc99fd5a87" id="msfalha" namespace="http://servicos.saude.gov.br/wsdl/mensageria/falha/v5r0/msfalha" />
+  <xs:element name="requestPesquisar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="filtropesquisa:FiltroPesquisa" />
+        <xs:element minOccurs="1" maxOccurs="1" name="higienizar" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responsePesquisar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="resultadopesquisa:ResultadoPesquisa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="requestConsultar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="cns:CNS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responseConsultar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="usuariosus:UsuarioSUS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="requestIncluir">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="usuariosus:UsuarioSUS" />
+        <xs:element minOccurs="0" maxOccurs="1" name="higienizar" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responseIncluir">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cns:CNS" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="identificadorlocal:IdentificadorLocal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="requestAtualizar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="usuariosus:UsuarioSUS" />
+        <xs:element minOccurs="0" maxOccurs="1" name="higienizar" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responseAtualizar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cns:CNS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="requestAlterarSituacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="usuariosus:UsuarioSUS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responseAlterarSituacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cns:CNS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="requestCalcularGrauDeQualidade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="usuariosus:UsuarioSUS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responseCalcularGrauDeQualidade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="grauqualidade:GrauQualidade" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

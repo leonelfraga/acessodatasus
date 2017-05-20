@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/nis" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/nis" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o Numero de Identificacao Social (NIS), podendo conter ainda  o numero de identificacao do PIS (Programa de Integracao Nacional) ou do PASEP (Programa de Formacao do Patrimonio do Servidor Publico) ou do NIT (Numero de Identificacao do Trabalhador).]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="NIS" type="NISType" />
+  <xs:complexType name="NISType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identificador" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código de identificação.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="numeroDocumento">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero NIS/PIS/PASEP/NIT.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="2" />
+            <xs:maxLength value="15" />
+            <xs:pattern value="[1-9][0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

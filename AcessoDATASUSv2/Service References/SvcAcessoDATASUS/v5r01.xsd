@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o Cartao Nacional de Saude (CNS) do usuario do SUS.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="CNS" type="CNSType" />
+  <xs:complexType name="CNSType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="numeroCNS">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Numero do CNS do usuario do SUS.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="15" />
+            <xs:maxLength value="15" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="dataAtribuicao" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Data de atribuição do CNS ao usuario do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="tipoCartao" type="TipoCNSType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Tipo do CNS associada ao usuario do SUS. D: definitivo, P: provisorio.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="manual" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Flag que identifica se o o cartao foi adicionado manualmente.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="justificativaManual" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Justificativa para a adicao do cartao manual.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaCNS" type="ListaCNSType" />
+  <xs:complexType name="ListaCNSType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" ref="CNS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TipoCNSType">
+    <xs:annotation>
+      <xs:documentation><![CDATA[Tipo do CNS associada ao usuario do SUS. D: definitivo, P: provisorio.]]></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="D" />
+      <xs:enumeration value="P" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

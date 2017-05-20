@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r1/tipologradouro" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r1/tipologradouro" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa tipo de logradouro.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="TipoLogradouro" type="TipoLogradouroType" />
+  <xs:complexType name="TipoLogradouroType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="codigoTipoLogradouro">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código do tipo de logradouro.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="3" />
+            <xs:pattern value="[0-9]*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descricaoTipoLogradouro" type="xs:string">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Descrição do tipo de logradouro.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

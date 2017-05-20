@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/cadsus/v1r1/dadosprecadastro" xmlns:protocolo="http://servicos.saude.gov.br/schema/cadsus/v1r0/protocoloprecadastro" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/cadsus/v1r1/dadosprecadastro" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A3181765f-770e-473b-aa15-6fd6e2b02ff2" namespace="http://servicos.saude.gov.br/schema/cadsus/v1r0/protocoloprecadastro" />
+  <xs:element name="DadosPreCadastro" type="DadosPreCadastroType" />
+  <xs:complexType name="DadosPreCadastroType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ProtocoloPreCadastro" type="protocolo:ProtocoloPreCadastroType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Protocolo do pre-cadastro, caso o usuario tenha passado por este processo.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="homologado" type="HomologadoType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Identifica se o usuario do pre-cadastro ja foi homologado. S:Sim ou N:Nao]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="dataHomologacao" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Data da homologacao do usuario pre-cadastro.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="solicitouAcessoPortal" type="SolicitouAcessoPortalType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Identifica se o usuario do pre-cadastro solicitou acesso ao portal.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HomologadoType">
+    <xs:annotation>
+      <xs:documentation><![CDATA[Identifica se o usuario do pre-cadastro ja foi homologado. S:Sim ou N:Nao]]></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="S" />
+      <xs:enumeration value="N" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SolicitouAcessoPortalType">
+    <xs:annotation>
+      <xs:documentation><![CDATA[Identifica se o usuario do pre-cadastro solicitou acesso ao portal. S:Sim ou N:Nao]]></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="S" />
+      <xs:enumeration value="N" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

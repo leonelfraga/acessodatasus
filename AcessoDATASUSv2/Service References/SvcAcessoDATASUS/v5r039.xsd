@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/corporativo/v5r0/emails" xmlns:email="http://servicos.saude.gov.br/schema/corporativo/v1r2/email" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/v5r0/emails" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/CadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ae3fb9983-83d7-438a-9045-f1c752b19015" id="email" namespace="http://servicos.saude.gov.br/schema/corporativo/v1r2/email" />
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa uma lista de endereco de email.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="Emails" type="EmailsType" />
+  <xs:complexType name="EmailsType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="2" name="Email" type="email:EmailType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
